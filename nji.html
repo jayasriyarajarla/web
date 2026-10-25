@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cravings Bakery</title>
+    <link rel="stylesheet" href="nji.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1>🍰 Sweet Cravings</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Section with Background Image -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Freshly Baked Happiness!</h2>
+                <p>Delicious Cakes, Cookies and Pastries</p>
+                <a href="#menu" class="btn">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>Welcome to Sweet Cravings</h2>
+            <p>
+                We make every occasion special with fresh cakes,
+                delicious cookies, creamy pastries and tasty treats.
+                Every bite is filled with sweetness and happiness!
+            </p>
+        </section>
+
+        <!-- Bakery Menu -->
+        <section id="menu" class="menu">
+            <h2>Our Delicious Menu</h2>
+
+            <div class="products">
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                         alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with creamy frosting.</p>
+                    <h4>₹499</h4>
+                    <button onclick="addToCart('Chocolate Cake',499)">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80"
+                         alt="Vanilla Cupcakes">
+                    <h3>Vanilla Cupcakes</h3>
+                    <p>Soft cupcakes with sweet vanilla cream.</p>
+                    <h4>₹99</h4>
+                    <button onclick="addToCart('Vanilla Cupcakes',99)">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+                         alt="Butter Croissant">
+                    <h3>Butter Croissant</h3>
+                    <p>Freshly baked, crispy and buttery.</p>
+                    <h4>₹79</h4>
+                    <button onclick="addToCart('Butter Croissant',79)">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80"
+                         alt="Chocolate Cookies">
+                    <h3>Chocolate Cookies</h3>
+                    <p>Crunchy cookies filled with chocolate chips.</p>
+                    <h4>₹149</h4>
+                    <button onclick="addToCart('Chocolate Cookies',149)">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"
+                         alt="Strawberry Dessert">
+                    <h3>Strawberry Pastry</h3>
+                    <p>Delicious pastry with a fruity flavour.</p>
+                    <h4>₹89</h4>
+                    <button onclick="addToCart('Strawberry Pastry',89)">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                         alt="Chocolate Brownie">
+                    <h3>Chocolate Brownie</h3>
+                    <p>Soft, rich and delicious chocolate brownie.</p>
+                    <h4>₹119</h4>
+                    <button onclick="addToCart('Chocolate Brownie',119)">
+                        Add to Cart
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Shopping Cart -->
+        <section id="order" class="order">
+            <h2>Your Shopping Cart</h2>
+
+            <div class="order-box">
+                <ul id="cart-items">
+                    <li>Your cart is empty.</li>
+                </ul>
+
+                <h3>Total: ₹<span id="total">0</span></h3>
+
+                <button type="button" onclick="clearCart()">
+                    Clear Cart
+                </button>
+
+                <h2>Place Your Order</h2>
+
+                <form id="orderForm">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your name" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone"
+                           placeholder="10-digit phone number"
+                           pattern="[0-9]{10}" required>
+
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address"
+                              placeholder="Enter your address"
+                              required></textarea>
+
+                    <button type="submit">Place Order</button>
+                </form>
+
+                <p id="message" role="status"></p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: sweetcravings@example.com</p>
+            <p>Phone: 9876543210</p>
+            <p>Address: Main Road, Andhra Pradesh, India</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sweet Cravings Bakery | Made with ❤️</p>
+    </footer>
+</body>
+</html>

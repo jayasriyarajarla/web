@@ -1,0 +1,318 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7ff;
+    color: #292943;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #17152e;
+    padding: 15px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar h1 {
+    color: #ffcc70;
+    font-size: 27px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffcc70;
+}
+
+/* Hero Background Image */
+.hero {
+    min-height: 500px;
+
+    background:
+        linear-gradient(rgba(15, 10, 40, 0.65),
+                        rgba(15, 10, 40, 0.65)),
+        url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 35px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.tagline {
+    color: #ffcc70;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.date {
+    color: #ffcc70;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #ff7b54;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e45131;
+}
+
+/* Common Section Styling */
+section {
+    padding: 55px 6%;
+}
+
+section h2 {
+    text-align: center;
+    color: #5834a5;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* Events Section */
+.events {
+    background-color: #eeebff;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.event-card {
+    background-color: white;
+    text-align: center;
+    padding: 25px 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(50, 30, 100, 0.12);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+}
+
+.event-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    color: #5834a5;
+    margin-bottom: 10px;
+}
+
+.event-card span {
+    display: inline-block;
+    margin-top: 12px;
+    color: #e45131;
+    font-weight: bold;
+}
+
+/* Schedule Section */
+.schedule-container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.schedule-item {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #ff7b54;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.time {
+    min-width: 110px;
+    color: #5834a5;
+    font-weight: bold;
+}
+
+.schedule-item h3 {
+    margin-bottom: 5px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+/* Registration Section */
+.register {
+    background-color: #eeebff;
+    text-align: center;
+}
+
+.form-box {
+    max-width: 600px;
+    margin: 25px auto 0;
+    padding: 28px;
+    background-color: white;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(50, 30, 100, 0.12);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form button {
+    margin-top: 10px;
+    background-color: #5834a5;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3d237c;
+}
+
+#message {
+    margin-top: 15px;
+    color: #218838;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background-color: #fff0e9;
+}
+
+.contact p {
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #17152e;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .event-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+}
+

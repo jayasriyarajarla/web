@@ -1,0 +1,295 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #4b2e2e;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #5c2c2c;
+    padding: 15px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar h1 {
+    color: #ffe2b8;
+    font-size: 26px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffc477;
+}
+
+/* Home Background Image */
+.hero {
+    min-height: 480px;
+
+    background:
+        linear-gradient(rgba(50, 20, 10, 0.55),
+                        rgba(50, 20, 10, 0.55)),
+        url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+/* Explore Button */
+.btn {
+    display: inline-block;
+    background-color: #e88d52;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c96c35;
+}
+
+/* Common Sections */
+section {
+    padding: 50px 6%;
+}
+
+section h2 {
+    text-align: center;
+    color: #803c35;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* Bakery Menu */
+.menu {
+    background-color: #ffeedc;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(80, 40, 20, 0.12);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 12px 0 5px;
+    color: #713b32;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.card h4 {
+    color: #c45b2c;
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+/* Buttons */
+button {
+    background-color: #a94f35;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #783522;
+}
+
+/* Order Section */
+.order-box {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(80, 40, 20, 0.12);
+}
+
+#cart-items {
+    padding-left: 20px;
+}
+
+#cart-items li {
+    margin-bottom: 12px;
+}
+
+#cart-items button {
+    margin-left: 8px;
+    padding: 5px 9px;
+    font-size: 12px;
+}
+
+.order-box h3 {
+    margin: 20px 0;
+    color: #803c35;
+}
+
+.order-box h2 {
+    margin-top: 30px;
+}
+
+/* Order Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8b8a5;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#message {
+    margin-top: 15px;
+    color: #27733b;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f8dfc8;
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #5c2c2c;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+}
